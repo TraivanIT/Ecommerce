@@ -1,0 +1,37 @@
+<div class="container mt-1 mb-1 top-navbar">
+  <div class="row">
+    <div class="col-md-2">
+      <img src="https://traivan-portfolio-bucket.s3.us-east-2.amazonaws.com/vaddeelgo.png" height="80" class="shadow-sm bg-white">
+
+      
+    </div>
+    <div class="col-md-2">
+      <%if current_customer %>
+        <h6 class=" pt-4">Hi <%= current_customer.name%></h6>
+     
+        <small>Enjoin your shoping !</small>
+      <% else %>
+      <h6>Hi Gust Please Sign in or Register for shopping</h6>
+      <% end %>
+      
+    </div>
+    <div class="col-md-5 mt-4">
+        <label class="sr-only" for="inlineFormInputGroup">Search</label>
+        <div class="input-group mb-2">
+          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Searching.....">
+          <div class="input-group-append">
+            <div class="input-group-text"><i class="fas fa-search"></i></div>
+          </div>
+          
+        </div>
+    </div>
+    <div class="col-md-3">
+      <div class="cart float-right mt-4">
+        <a href="#" class="nav-link text-muted">
+        <i class="fas fa-shopping-cart "></i> My Cart - $200.00
+      </a>
+      </div>
+    
+    </div>
+  </div>
+</div><!--end of container and top-navbar-->

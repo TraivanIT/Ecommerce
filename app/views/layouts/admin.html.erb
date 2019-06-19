@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ecommerce</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'shared/fontawsome'%>
+  </head>
+
+  <body>
+    <%= render 'shared/admin_nav'%>
+    <div class="container-fluid">
+    <div class="row">
+      <%= render 'shared/admin_aside_nav'%>
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <%= render 'shared/alerts'%>
+        <%= yield %>
+      </main>
+    </div><!--end of row-->
+  </div><!--end of container-fluild-->
+    
+  </body>
+</html>

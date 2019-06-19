@@ -1,0 +1,52 @@
+<div class="row justify-content-md-center">
+	<div class="col-md-10 ">
+
+
+
+		<h4 class="text-muted text-center mt-3">Create New Product Now</h4>
+<div class="row">
+	<div class="col-md-12 mt-2">
+		<%= form_for [:admin , @product] do |f|%>
+			<div class="form-row">
+				<div class="col-md-4 mb-3">
+					<label for="validationCustom01">Product Name</label>
+	  			<%= f.text_field :product_name , class: 'form-control mb-2 mr-sm-2', placeholder: 'Product Name'%>
+				</div>
+				<div class="col-md-4 mb-3">
+					<label for="validationCustom01">Product Name</label>
+	  			<%= f.text_field :product_price , class: 'form-control mb-2 mr-sm-2', placeholder: 'Product Price'%>
+				</div>
+				<div class="col-md-4 mb-3">
+					<label for="validationCustom01">Product Image</label>
+	  			
+	  			<div class="custom-file">
+				    
+				    <%= f.file_field :product_image , class: ' custom-file-input'%>
+				    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+				    <div class="invalid-feedback">Example invalid custom file feedback</div>
+				  </div>
+				</div>
+	  	</div>
+	  	<div class="form-row">
+	  		<div class="col-md-12">
+	  			<label for="validationCustom01">Product Description</label>
+	  			<%= f.text_area :description, class: 'form-control', rows: "10"%>
+	  		</div>
+	  	</div>
+	  	<br>
+	  	<div class="form-row">
+	  		<div class="col-md-6">
+	  			<%= f.button :submit, class: "btn btn-info"%>
+	  			<%= link_to 'Cancel ', admin_products_path,  class: "btn btn-danger"%>
+	  		</div>
+	  		
+	  	</div>
+		<% end %>
+	</div>
+</div>
+
+
+
+		
+	</div>
+</div>

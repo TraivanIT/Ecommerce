@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ecommerce</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="shortcut icon" type="image/x-icon" href="https://traivan-portfolio-bucket.s3.us-east-2.amazonaws.com/vandde-icon.png" />
+    
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'shared/fontawsome'%>
+  </head>
+  
+
+  <body>
+    <div id="wrapper">
+      <%= render 'shared/alerts'%>
+      <!--starting top navabar-->
+      <%= render 'shared/top_navbar'%>
+      <!--end of top navbar-->
+      
+      <!--starting navigation bar-->
+      <div class="container">
+         <%= render 'shared/navbar'%>
+      </div>
+      <!--end of navigation bar-->
+      
+        
+      <div class="pt-1"></div>
+ 
+      <div class="container">
+        <div class="row" id="slip-inner">
+          <div class="col-md-3  mb-1 " id="category">
+            <div class="aside-inner bg-white">
+              <%= render 'shared/category_aside'%>
+            </div> 
+            
+          </div><!--end of category and aside-->
+          <div class="col-md-9 ">
+            <%= render 'shared/banner_slide'%>
+          </div><!--end of col-md-9 and slide-->
+        </div><!--end of row-->
+      </div><!--end of container-->
+
+ 
+      
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-12 hidden-xs-down d-none d-sm-block">
+             <div class="aside-slide mt-2">
+               <img src="https://traivan-portfolio-bucket.s3.us-east-2.amazonaws.com/aside-slide.png" class="img-fluid">
+             </div>
+             <div class="call-now mt-2">
+               <img src="https://traivan-portfolio-bucket.s3.us-east-2.amazonaws.com/call-now.png">
+             </div>
+
+            <div class="google-map mt-2">
+              <%= render 'shared/google_map'%>
+            </div>
+            
+          </div><!--end of col-md-end-->
+          <div class="col-md-9 col-12">
+            <%= yield %>
+          </div>
+        </div><!--end of row-->
+      </div><!--end of container-->
+    </div><!--end of wrapper-->
+
+    <div  id="footer">
+      
+      <%= render 'shared/footer'%>
+    </div>
+    
+    
+  </body>
+</html>

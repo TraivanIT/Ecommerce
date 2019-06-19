@@ -1,0 +1,29 @@
+<div class="container">
+	
+	<h1>Moderators List</h1>
+	<table class="table table-borderless">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Fullname</th>
+				<th>Username</th>
+				<th>Create</th>
+				<th>Action</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<% @moderators.each do |moderator|%>
+			<tr>
+				<td><%= moderator.id%></td>
+				<td><%= moderator.fullname%></td>
+				<td><%= moderator.username%></td>
+				<td><%= time_ago_in_words moderator.created_at%></td>
+				<td>
+					<%= link_to 'edit' ,edit_admin_moderator_path(moderator), class: 'btn btn-danger'%>
+				</td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>

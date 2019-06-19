@@ -1,0 +1,31 @@
+<h1><%= @product.product_name %></h1>
+<hr>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<%= image_tag(@product.product_image.url , class: 'img-fluid') %>
+		</div>
+		<div class="col-md-6 text-muted">
+			<ul class="h6">
+				<li><b>Product Name:</b> <%= @product.product_name%></li>
+				<li><b>Product Name:</b> <%= number_to_currency @product.product_price%></li>
+				<li><b>Product Name:</b> <%= time_ago_in_words @product.created_at%></li>
+				<li><b>Adminstrator:</b> <%= @product.moderator.fullname%></li>
+				<li><b>Action</b>
+
+					<%= link_to 'Back', admin_products_path, class: 'text-info'%>
+					<%= link_to 'Edit', edit_admin_product_path(@product), class: 'text-info'%> |
+					<%= link_to 'Delete', admin_product_path(@product), method: :delete, data: {confirm: 'Are you sure ?'}, class: 'text-info'%> |
+					
+
+				</li>
+				<b>Description :</b>
+				<p>
+					<%= @product.description%>
+				</p>
+				
+			</ul>
+		</div>
+	</div>
+</div>

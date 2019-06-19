@@ -1,0 +1,32 @@
+<div class="modal-dialog text-center">
+  <div class="col-sm-8 main-section ">
+    <div class="modal-content">
+      
+      <div class="col-12 user-img">
+        <i class="fas fa-user-tie"></i>
+      </div>
+      <div class="col-12">
+        <%= form_tag sessions_path do %>
+          <div class="form-group">
+            <%= text_field_tag :email, params[:email], placeholder: 'Enter Email or Phone', class: "form-control", autofocus: true%>
+          </div>
+
+          <div class="form-group">
+            <%= password_field_tag :password, nil, placeholder: ' Enter Password', class: "form-control"%>
+          </div>
+
+          <%= submit_tag "Login !", class: 'btn btn-primary btn-submit' %>
+
+        <% end %>
+      </div>
+      <div class="col-12">
+        <a href="#" class="text-muted ">Fotgot Password?</a>
+      </div>
+
+    </div><!--end of modal content-->
+  </div>
+</div>
+
+
+
+

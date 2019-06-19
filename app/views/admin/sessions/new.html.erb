@@ -1,0 +1,29 @@
+<div class="modal-dialog text-center">
+	<div class="col-sm-8 main-section ">
+		<div class="modal-content">
+			
+			<div class="col-12 user-img">
+				<img src="https://traivan-portfolio-bucket.s3.us-east-2.amazonaws.com/Traivan.jpg", width="100">
+			</div>
+			<div class="col-12">
+				<%= form_tag admin_sessions_path do %>
+					<div class="form-group">
+						<%= text_field_tag :username, params[:username], placeholder: 'Enter Username', class: "form-control", autofocus: true%>
+					</div>
+
+					<div class="form-group">
+						<%= password_field_tag :password, nil, placeholder: ' Enter Password', class: "form-control"%>
+					</div>
+
+					<%= submit_tag "Login !", class: 'btn btn-primary btn-submit' %>
+
+				<% end %>
+			</div>
+			<div class="col-12">
+				<a href="#" class="text-muted ">Fotgot Password?</a>
+			</div>
+
+		</div><!--end of modal content-->
+	</div>
+</div>
+

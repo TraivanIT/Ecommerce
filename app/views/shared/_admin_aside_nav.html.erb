@@ -1,0 +1,26 @@
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+  <div class="sidebar-sticky">
+    <ul class="nav flex-column ">
+      <li class="nav-item">
+         <%=link_to  admin_moderators_path, class: 'nav-link text-muted' do %>
+           <i class="fab fa-angellist pr-2"></i> Dashboard
+          <% end %>
+      </li>
+      <li class="nav-item">
+          <%=link_to  admin_moderators_path, class: 'nav-link text-muted' do %>
+          <i class="fas fa-user-cog pr-1"></i> Adminstrator
+          <% end %>
+      </li>
+      <li class="nav-item">
+        <%=link_to admin_products_path, class: 'nav-link text-muted' do %>
+          <i class="fas fa-ad pr-2"></i> Products
+        <% end %>
+      </li>
+      <li class="nav-item pr-2">
+        <%=link_to admin_customers_path, class: 'nav-link text-muted' do %>
+          <i class="fas fa-users pr-1"></i> Customers
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>

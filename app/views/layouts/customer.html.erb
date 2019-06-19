@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ecommerce</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="shortcut icon" type="image/x-icon" href="https://traivan-portfolio-bucket.s3.us-east-2.amazonaws.com/vandde-icon.png" />
+    
+
+    <%= stylesheet_link_tag    'customer', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'shared/fontawsome'%>
+  </head>
+  <body>
+     
+      <%= render 'shared/alerts'%>
+      <!--starting top navabar-->
+      <%= render 'shared/top_navbar'%>
+      <!--end of top navbar-->
+      
+      <!--starting navigation bar-->
+      <div class="container">
+         <%= render 'shared/navbar'%>
+      </div>
+      <!--end of navigation bar-->
+      <div class="container">
+          <%= yield %>
+      </div>
+  </body>
+  </html>

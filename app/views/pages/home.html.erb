@@ -1,0 +1,38 @@
+<div class="row">
+	<div class="col-12">
+		<div class="py4 bg-white mt-2">
+			<h5 class="pt-2 pb-2 text-center" >Products</h5>
+		</div><!--end of py-4-->
+	</div><!--end of col-12-->
+</div><!--end of row-->
+
+<div class="row">
+	<div class="col-12">
+		<div class="product-grid">
+			<% @products.each do |product|%>
+				<div class="card-product bg-white">
+					<%= image_tag product.product_image.url, class: "img-fluid"%>
+					<div class="infor pl-2 pr-2">
+						<strong class="text-black"><%= product.product_name%></strong>
+						<div class="product-footer pt-2">
+							<p class="float-left">$ <%= product.product_price%></p>
+							<%= link_to 'Order Now', '#', class: "btn btn-sm btn-outline-danger float-right btn-order"%>
+						</div><!--end of product-footer-->
+					</div><!--end of infor-->
+				</div><!--end of product-->
+			<%  end %>
+		</div><!--end of product-grid-->
+	</div><!--end of col-12-->
+</div><!--end of row-->
+
+
+<div class="row mt-2">
+	<div class="col-12">
+		<%= paginate @products , 
+									theme: 'twitter-bootstrap-4',
+                  pagination_class: "pagination-sm",
+                  nav_class: "d-inline-b float-right" %>
+	</div><!--end of col-12-->
+</div><!--end of row-->
+
+	
